@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title ""
 Date ""
-Rev ""
+Rev "2"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -83,7 +83,7 @@ F 3 "~" H 10950 6800 50  0001 C CNN
 	1    10950 6800
 	1    0    0    -1  
 $EndComp
-Text Label 4650 2400 0    43   ~ 0
+Text Label 4100 2200 0    43   ~ 0
 Vcc
 Text Label 5650 2450 0    43   ~ 0
 ~CTS
@@ -145,34 +145,12 @@ Wire Wire Line
 	5050 3500 5250 3500
 Wire Wire Line
 	4250 2800 4050 2800
-Wire Wire Line
-	4650 2400 4650 2500
 Text Label 5650 4100 0    43   ~ 0
 GND
 Text Label 5650 4000 0    43   ~ 0
 TXD
 Text Label 5650 3900 0    43   ~ 0
 RXD
-Text Label 5650 3800 0    43   ~ 0
-V3
-Text Label 5650 3700 0    43   ~ 0
-UD+
-Text Label 5650 3600 0    43   ~ 0
-UD-
-Text Label 5650 3500 0    43   ~ 0
-XI
-Text Label 5650 3400 0    43   ~ 0
-XO
-Wire Wire Line
-	5650 3400 5900 3400
-Wire Wire Line
-	5900 3500 5650 3500
-Wire Wire Line
-	5650 3600 5900 3600
-Wire Wire Line
-	5900 3700 5650 3700
-Wire Wire Line
-	5650 3800 5900 3800
 Wire Wire Line
 	5900 3900 5650 3900
 Wire Wire Line
@@ -185,8 +163,6 @@ Text Label 5250 2700 2    43   ~ 0
 TXD
 Text Label 5250 2800 2    43   ~ 0
 RXD
-Text Label 4550 2400 0    43   ~ 0
-V3
 Text Label 4050 3000 0    43   ~ 0
 UD+
 Text Label 4050 3100 0    43   ~ 0
@@ -231,10 +207,62 @@ Wire Wire Line
 	5250 2700 5050 2700
 Wire Wire Line
 	5250 2800 5050 2800
+Connection ~ 3700 3950
 Wire Wire Line
-	4550 2400 4550 2500
+	4650 2200 4650 2500
+$Comp
+L XM7D-0512:XM7D-0512 J3
+U 1 1 5EB6D036
+P 2600 2900
+F 0 "J3" H 2493 2333 50  0000 C CNN
+F 1 "XM7D-0512" H 2493 2424 50  0000 C CNN
+F 2 "OMRON_XM7D-0512" H 2600 2900 50  0001 L BNN
+F 3 "Manufacturer recommendations" H 2600 2900 50  0001 L BNN
+F 4 "OMRON" H 2600 2900 50  0001 L BNN "Field4"
+F 5 "" H 2600 2900 50  0001 L BNN "Field5"
+	1    2600 2900
+	-1   0    0    1   
+$EndComp
 Wire Wire Line
-	4050 3000 4250 3000
+	4250 3000 3000 3000
 Wire Wire Line
-	4050 3100 4250 3100
+	4250 3100 3000 3100
+Wire Wire Line
+	3000 3200 3550 3200
+Wire Wire Line
+	3550 2200 3550 3200
+Wire Wire Line
+	3000 2600 3150 2600
+Wire Wire Line
+	3150 2600 3150 2800
+Wire Wire Line
+	3150 2800 3000 2800
+Wire Wire Line
+	3150 2800 3150 3950
+Connection ~ 3150 2800
+Wire Wire Line
+	3150 3950 3700 3950
+NoConn ~ 5900 3400
+NoConn ~ 5900 3500
+NoConn ~ 5900 3600
+NoConn ~ 5900 3700
+$Comp
+L Device:C C3
+U 1 1 5EB8F05F
+P 4400 2350
+F 0 "C3" H 4515 2396 50  0000 L CNN
+F 1 "10n" H 4515 2305 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 4438 2200 50  0001 C CNN
+F 3 "~" H 4400 2350 50  0001 C CNN
+	1    4400 2350
+	1    0    0    -1  
+$EndComp
+Connection ~ 4400 2200
+Wire Wire Line
+	4400 2200 4650 2200
+Wire Wire Line
+	4400 2500 4550 2500
+Wire Wire Line
+	3550 2200 4400 2200
+NoConn ~ 5900 3800
 $EndSCHEMATC
